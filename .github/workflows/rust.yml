@@ -2,7 +2,9 @@ name: Rust
 
 on:
   push:
-    branches: [ "main" ]
+    branches: ["main"]
+    tags:
+      - v*
 
 env:
   CARGO_TERM_COLOR: always
@@ -23,4 +25,3 @@ jobs:
         with:
           artifacts: "target/wasm32-unknown-unknown/release/*.wasm"
           token: ${{ secrets.GITHUB_TOKEN }}
-
