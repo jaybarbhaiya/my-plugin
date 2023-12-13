@@ -22,5 +22,5 @@ jobs:
       - uses: ncipollo/release-action@v1
         with:
           tag: ""
-          artifacts: "release/*.wasm"
+          artifacts: "target/wasm32-unknown-unknown/release/*.wasm"
           token: ${{ github.token }}
