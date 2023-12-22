@@ -7,5 +7,6 @@ extern "ExtismHost" {
 
 #[plugin_fn]
 pub fn greet(name: String) -> FnResult<String> {
-    Ok(format!("Hello, {}!", name))
+    let say_bye = unsafe { say_bye()? };
+    Ok(format!("Hello, {}. {}!", name, say_bye))
 }

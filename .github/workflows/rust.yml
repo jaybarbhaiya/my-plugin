@@ -21,6 +21,6 @@ jobs:
       - run: cargo build --release --target wasm32-unknown-unknown
       - uses: ncipollo/release-action@v1
         with:
-          tag: "v1.0.1"
+          tag: "v1.0.2"
           artifacts: "target/wasm32-unknown-unknown/release/*.wasm"
           token: ${{ github.token }}
